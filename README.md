@@ -1,73 +1,126 @@
-# React + TypeScript + Vite
+# 🌀 The Entropy Chamber
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, meditative art experience where neglect has consequences and patience is rewarded.
 
-Currently, two official plugins are available:
+![The Entropy Chamber](https://img.shields.io/badge/Status-Live-brightgreen) ![React](https://img.shields.io/badge/React-18.3-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue) ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎭 What Is This?
 
-## React Compiler
+The Entropy Chamber is a strange, contemplative web experience that explores the relationship between attention, decay, and care. It's part art installation, part idle game, part meditation tool.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**The core philosophy:** Everything decays without attention. But with patience and presence, beauty emerges.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎛️ The Frequency Dial
+- Central control mechanism for the chamber's energy
+- Drag to adjust frequency from 0-100 Hz
+- Push too high and trigger system overload
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 💨 Dust Accumulation
+- Leave the chamber idle and dust naturally accumulates
+- Watch the dust meter fill over time
+- Drag across the screen to clean dust particles
+- **Warning:** Let dust reach 100% and witness the explosive consequences
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### ⚡ Overload & Cracks
+- Push the frequency past safe limits
+- Cracks appear across the chamber
+- Click on cracks to repair them before the system destabilizes
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🌿 Moss Growth (The Reward)
+- Keep the frequency steady (40-60 Hz range)
+- Maintain low dust levels
+- Wait patiently...
+- Beautiful moss begins to grow as a reward for your care
+
+### 🎵 Ambient Audio
+- Reactive sound design that responds to your interactions
+- Cleaning sounds, crack repairs, and ambient frequencies
+- Audio initializes on first interaction
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or bun
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <your-repo-url>
+
+# Navigate to project directory
+cd entropy-chamber
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build for Production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## 🎮 How to Play
+
+1. **Enter the Chamber** - Click the welcome screen to begin
+2. **Explore the Dial** - Drag the central dial to change frequency
+3. **Don't Neglect It** - If you stop interacting, dust will accumulate
+4. **Clean Regularly** - Drag across dusty areas to clean
+5. **Avoid Overload** - Don't push frequency too high
+6. **Repair Damage** - Click cracks to fix them
+7. **Find Balance** - Keep frequency around 50Hz, stay clean, and wait for moss
+
+## 🛠️ Tech Stack
+
+- **Framework:** React 18 with TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **State Management:** Custom React Hooks
+- **Audio:** Web Audio API
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── EntropyChamber.tsx    # Main chamber orchestrator
+│   ├── FrequencyDial.tsx     # Central control dial
+│   ├── DustLayer.tsx         # Dust particle system
+│   ├── CrackOverlay.tsx      # Crack damage display
+│   ├── MossGrowth.tsx        # Moss reward system
+│   ├── WelcomeOverlay.tsx    # Entry screen
+│   ├── AmbientBackground.tsx # Background visuals
+│   ├── ThoughtStream.tsx     # Floating thoughts
+│   └── HiddenQuote.tsx       # Easter egg quotes
+├── hooks/
+│   ├── useEntropyState.ts    # Core state management
+│   └── useAudioEngine.ts     # Audio system
+├── data/
+│   └── thoughts.ts           # Thought content
+└── pages/
+    └── Index.tsx             # Main page
+```
+
+## 🎨 Design Philosophy
+
+The Entropy Chamber draws inspiration from:
+- **Digital Zen Gardens** - Spaces for contemplation
+- **Tamagotchi** - The responsibility of care
+- **Generative Art** - Beauty from systems
+- **Wabi-Sabi** - Finding beauty in imperfection
+
+## 📜 License
+
+MIT License - Feel free to remix, modify, and share.
+
+---
+
+*"In the chamber, entropy is not the enemy. Neglect is."*
